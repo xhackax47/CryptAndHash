@@ -9,7 +9,7 @@ public class CryptHash {
 		final Scanner sc = new Scanner(System.in);
 		int choix;
 
-		//Ouverture Boucle Programme
+		// Ouverture Boucle Programme
 		do {
 
 			// Menu
@@ -27,13 +27,20 @@ public class CryptHash {
 			System.out.println("Choisissez l'algorithme à utiliser : ");
 			System.out.println("");
 			String s = sc.nextLine();
-			choix = Integer.parseInt(s);
-
-			//Options menu
+			
+			//Gestion Exception
+			try {
+				choix = Integer.parseInt(s);
+			} catch (NumberFormatException e) {
+				choix = 0;
+			}
+			
+			// Options menu
 			switch (choix) {
 
-			//Algo MD2
+			// Algo MD2
 			case 1:
+				System.out.println("");
 				System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
 				System.out.println("");
 				String md2String = sc.nextLine();
@@ -45,8 +52,9 @@ public class CryptHash {
 				System.out.println("");
 				break;
 
-			//Algo MD5
+			// Algo MD5
 			case 2:
+				System.out.println("");
 				System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
 				System.out.println("");
 				String md5String = sc.nextLine();
@@ -58,8 +66,9 @@ public class CryptHash {
 				System.out.println("");
 				break;
 
-			//Algo SHA1
+			// Algo SHA1
 			case 3:
+				System.out.println("");
 				System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
 				System.out.println("");
 				String sha1String = sc.nextLine();
@@ -71,8 +80,9 @@ public class CryptHash {
 				System.out.println("");
 				break;
 
-			//Algo SHA2
+			// Algo SHA2
 			case 4:
+				System.out.println("");
 				System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
 				System.out.println("");
 				String sha2String = sc.nextLine();
@@ -84,8 +94,9 @@ public class CryptHash {
 				System.out.println("");
 				break;
 
-			//Algo SHA3
+			// Algo SHA3
 			case 5:
+				System.out.println("");
 				System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
 				System.out.println("");
 				String sha3String = sc.nextLine();
@@ -97,8 +108,9 @@ public class CryptHash {
 				System.out.println("");
 				break;
 
-			//Algo SHA5
+			// Algo SHA5
 			case 6:
+				System.out.println("");
 				System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
 				System.out.println("");
 				String sha5String = sc.nextLine();
@@ -110,25 +122,27 @@ public class CryptHash {
 				System.out.println("");
 				break;
 
-			//Cas de Condition de fin de boucle
+			// Cas de Condition de fin de boucle
 			case 7:
 				break;
-				
-			//Gestion des erreurs de saisie dans le choix
+
+			// Gestion des erreurs de saisie dans le choix
 			default:
+				System.out.println("");
 				System.out.println("Choix inconnu, veuillez recommencer");
+				System.out.println("");
 				break;
 
 			}
 
-		} 
-		//Condition de fin de boucle
+		}
+		// Condition de fin de boucle
 		while (choix != 7);
 
 		System.out.println("");
 		System.out.println("Au revoir et merci d'avoir utilisé ce programme");
 
-		//Nettoyage et fermeture
+		// Nettoyage et fermeture
 		System.out.checkError();
 		System.out.flush();
 		sc.close();
