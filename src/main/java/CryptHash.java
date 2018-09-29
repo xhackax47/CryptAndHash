@@ -23,7 +23,6 @@ public class CryptHash {
 		try {
 			Thread.sleep(3*1000);
 		} catch (InterruptedException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
@@ -149,7 +148,6 @@ public class CryptHash {
 		try {
 			Thread.sleep(3*1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
