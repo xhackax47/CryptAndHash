@@ -8,6 +8,7 @@ package model;
 public class Menus {
 	
 	public static void afficheMenuGeneral() {
+		System.out.println("");
 		System.out.println("Menu Général");
 		System.out.println("");
 		System.out.println("-------------------------\n");
