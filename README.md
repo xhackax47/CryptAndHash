@@ -2,8 +2,9 @@ CryptAndHash - Logiciel de Cryptage et Hashage de chaŒnes de caractŠres en con
 
 Ce logiciel sert à transformer des chaînes de caractères en chaine de hashage bien badass que vous pouvez utiliser comme mot de passe voir pour certains plutôt comme phrase de passe.
 
-Pour vous donner un exemple : 
+Vous pouvez tester ce logiciel en lancant seulement CryptAndHash.exe sur votre Windows directement, si vous avez un doute sur le logiciel je vous invite à consulter et analyser son code directement ici.
 
+EXEMPLE : 
 Le mot "Test" dans tous les types de hashage proposé donne :
 
 MD2 : 1178f3ddf625018179a93c1a0298dfa9
