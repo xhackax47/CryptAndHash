@@ -11,7 +11,7 @@ import model.Menus;
 
 public class CryptHash {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args){
 
 		final Scanner sc = new Scanner(System.in);
 		int choixHash;
@@ -20,7 +20,12 @@ public class CryptHash {
 
 		System.out.println("Bienvenue dans le programme CryptAndHash");
 		System.out.println("");
-		Thread.sleep(3*1000);
+		try {
+			Thread.sleep(3*1000);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 
 		// Ouverture Boucle Programme
 		do {
@@ -141,7 +146,12 @@ public class CryptHash {
 
 		System.out.println("");
 		System.out.println("Au revoir et merci d'avoir utilisé ce programme");
-		Thread.sleep(3*1000);
+		try {
+			Thread.sleep(3*1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		// Nettoyage et fermeture du programme
 		System.out.checkError();
