@@ -1,3 +1,5 @@
+package app;
+
 /**
  * 
  * @author CHAABI Samy
@@ -11,7 +13,7 @@ import model.Menus;
 
 public class CryptHash {
 
-	public static void main(String[] args){
+	public static void start(){
 
 		final Scanner sc = new Scanner(System.in);
 		int choixHash;
