@@ -20,6 +20,7 @@ public class Menus {
 	}
 	
 	public static void afficheMenuCryptage() {
+		System.out.println("");
 		System.out.println("CRYPTAGE");
 		System.out.println("");
 		System.out.println("-------------------------\n");
@@ -32,6 +33,7 @@ public class Menus {
 	}
 	
 	public static void afficheMenuHashage() {
+		System.out.println("");
 		System.out.println("HASHAGE");
 		System.out.println("");
 		System.out.println("-------------------------\n");
