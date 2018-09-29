@@ -1,5 +1,11 @@
+/**
+ * 
+ * @author CHAABI Samy
+ */
+
 import java.util.Scanner;
 
+import services.Crypt;
 import services.Hash;
 import model.Menus;
 
@@ -43,14 +49,12 @@ public class CryptHash {
 
 					switch (choixCrypt) {
 
-					// SECRET LEVEL (AES128)
 					case 1:
-
+						Crypt.secretCrypt();
 						break;
 
-					// TOP SECRET LEVEL (AES192 / AES256)
 					case 2:
-
+						Crypt.topSecretCrypt();
 						break;
 					// Cas de condition de fin de boucle
 					case 3:

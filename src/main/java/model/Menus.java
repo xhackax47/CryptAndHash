@@ -1,4 +1,10 @@
+/**
+ * 
+ * @author CHAABI Samy
+ */
+
 package model;
+
 public class Menus {
 	
 	public static void afficheMenuGeneral() {
