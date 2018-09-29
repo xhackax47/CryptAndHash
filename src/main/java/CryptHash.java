@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
-import org.apache.commons.codec.digest.DigestUtils;
+import services.Hash;
+import model.Menus;
 
 public class CryptHash {
 
@@ -16,17 +17,7 @@ public class CryptHash {
 
 		// Ouverture Boucle Programme
 		do {
-
-			// Menu
-			System.out.println("Menu Général");
-			System.out.println("");
-			System.out.println("-------------------------\n");
-			System.out.println("1 - Cryptage Fichier");
-			System.out.println("2 - Hashage Chaîne de caratères");
-			System.out.println("3 - Quitter le programme");
-			System.out.println("");
-			System.out.println("Choisissez la fonction à utiliser : ");
-			System.out.println("");
+			Menus.afficheMenuGeneral();
 			String sG = sc.nextLine();
 
 			// Gestion Exception
@@ -38,19 +29,9 @@ public class CryptHash {
 
 			// Options Menu Général
 			switch (choixGeneral) {
-
 			case 1:
 				do {
-					// Menu Cryptage
-					System.out.println("CRYPTAGE");
-					System.out.println("");
-					System.out.println("-------------------------\n");
-					System.out.println("1 - Cryptage niveau SECRET (AES128)");
-					System.out.println("2 - Cryptage niveau TOP-SECRET (AES192, AES256)");
-					System.out.println("3 - Revenir au menu général");
-					System.out.println("");
-					System.out.println("Choisissez le niveau à utiliser : ");
-					System.out.println("");
+					Menus.afficheMenuCryptage();
 					String sC = sc.nextLine();
 
 					// Gestion Exception
@@ -89,21 +70,7 @@ public class CryptHash {
 
 			case 2:
 				do {
-
-					// Menu Hash
-					System.out.println("HASHAGE");
-					System.out.println("");
-					System.out.println("-------------------------\n");
-					System.out.println("1 - MD2 HEX");
-					System.out.println("2 - MD5 HEX");
-					System.out.println("3 - SHA1 HEX");
-					System.out.println("4 - SHA256 HEX");
-					System.out.println("5 - SHA384 HEX");
-					System.out.println("6 - SHA512 HEX");
-					System.out.println("7 - Revenir au menu général");
-					System.out.println("");
-					System.out.println("Choisissez l'algorithme à utiliser : ");
-					System.out.println("");
+					Menus.afficheMenuHashage();
 					String sH = sc.nextLine();
 
 					// Gestion Exception
@@ -117,105 +84,36 @@ public class CryptHash {
 
 					// Options menu
 					switch (choixHash) {
-
-					// Algo MD2
 					case 1:
-						System.out.println("");
-						System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
-						System.out.println("");
-						String md2String = sc.nextLine();
-						String md2Hex = DigestUtils.md2Hex(md2String);
-						System.out.println("");
-						System.out.println("AVANT HASHAGE : " + md2String);
-						System.out.println("");
-						System.out.println("APRES HASHAGE MD2-HEX : " + md2Hex);
-						System.out.println("");
+						Hash.md2Hash();
 						break;
-
-					// Algo MD5
 					case 2:
-						System.out.println("");
-						System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
-						System.out.println("");
-						String md5String = sc.nextLine();
-						String md5Hex = DigestUtils.md5Hex(md5String);
-						System.out.println("");
-						System.out.println("AVANT HASHAGE : " + md5String);
-						System.out.println("");
-						System.out.println("APRES HASHAGE MD5-HEX : " + md5Hex);
-						System.out.println("");
+						Hash.md5Hash();
 						break;
-
-					// Algo SHA1
 					case 3:
-						System.out.println("");
-						System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
-						System.out.println("");
-						String sha1String = sc.nextLine();
-						String sha1Hex = DigestUtils.sha1Hex(sha1String);
-						System.out.println("");
-						System.out.println("AVANT HASHAGE : " + sha1String);
-						System.out.println("");
-						System.out.println("APRES HASHAGE SHA1-HEX : " + sha1Hex);
-						System.out.println("");
+						Hash.sha1Hash();
 						break;
-
-					// Algo SHA2
 					case 4:
-						System.out.println("");
-						System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
-						System.out.println("");
-						String sha2String = sc.nextLine();
-						String sha2Hex = DigestUtils.sha256Hex(sha2String);
-						System.out.println("");
-						System.out.println("AVANT HASHAGE : " + sha2String);
-						System.out.println("");
-						System.out.println("APRES HASHAGE SHA256-HEX : " + sha2Hex);
-						System.out.println("");
+						Hash.sha2Hash();
 						break;
-
-					// Algo SHA3
 					case 5:
-						System.out.println("");
-						System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
-						System.out.println("");
-						String sha3String = sc.nextLine();
-						String sha3Hex = DigestUtils.sha384Hex(sha3String);
-						System.out.println("");
-						System.out.println("AVANT HASHAGE : " + sha3String);
-						System.out.println("");
-						System.out.println("APRES HASHAGE SHA384-HEX : " + sha3Hex);
-						System.out.println("");
+						Hash.sha3Hash();
 						break;
-
-					// Algo SHA5
 					case 6:
-						System.out.println("");
-						System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
-						System.out.println("");
-						String sha5String = sc.nextLine();
-						String sha5Hex = DigestUtils.sha512Hex(sha5String);
-						System.out.println("");
-						System.out.println("AVANT HASHAGE : " + sha5String);
-						System.out.println("");
-						System.out.println("APRES HASHAGE MD2HEX : " + sha5Hex);
-						System.out.println("");
+						Hash.sha5Hash();
 						break;
-
 					// Cas de Condition de fin de boucle Menu Hash
 					case 7:
 						break;
-
 					// Gestion des erreurs de saisie dans le choix
 					default:
 						System.out.println("");
 						System.out.println("Choix inconnu, veuillez recommencer");
 						System.out.println("");
 						break;
-
 					}
-
 				}
+				
 				// Condition de fin de boucle Menu Hash
 				while (choixHash != 7);
 				break;
@@ -223,7 +121,6 @@ public class CryptHash {
 			// Cas de Condition de fin de boucle du programme
 			case 3:
 				break;
-
 			// Gestion des erreurs de saisie dans le choix
 			default:
 				System.out.println("");
@@ -233,6 +130,7 @@ public class CryptHash {
 			}
 
 		}
+		
 		// Condition de fin de boucle du programme
 		while (choixGeneral != 3);
 
