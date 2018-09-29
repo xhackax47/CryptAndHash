@@ -1,6 +1,4 @@
-"# CryptAndHash - Logiciel de Cryptage et Hashage de chaŒnes de caractŠres en console"  
-
-Welcome to CryptAndHash!
+CryptAndHash - Logiciel de Cryptage et Hashage de chaŒnes de caractŠres en console 
 
 Ce logiciel sert à transformer des chaînes de caractères en chaine de hashage bien badass que vous pouvez utiliser comme mot de passe voir pour certains plutôt comme phrase de passe.
 
