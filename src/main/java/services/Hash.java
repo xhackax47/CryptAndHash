@@ -87,7 +87,7 @@ public class Hash {
 		System.out.println("");
 		System.out.println("AVANT HASHAGE : " + sha5String);
 		System.out.println("");
-		System.out.println("APRES HASHAGE MD2HEX : " + sha5Hex);
+		System.out.println("APRES HASHAGE SHA512-HEX : " + sha5Hex);
 		System.out.println("");
 	}
 }
