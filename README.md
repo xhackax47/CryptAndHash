@@ -1,7 +1,9 @@
 CryptAndHash - Logiciel de Cryptage et Hashage de chaŒnes de caractŠres
 
+
 ENCRYPTAGE/DECRYPTAGE DE FICHIER EN COURS DE DEVELOPPEMENT...
 GUI EN COURS DE DEVELOPPEMENT...
+
 
 Ce logiciel sert à transformer des chaînes de caractères en chaine de hashage bien badass que vous pouvez utiliser comme mot de passe voir pour certains plutôt comme phrase de passe.
 
