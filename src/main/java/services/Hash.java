@@ -15,7 +15,7 @@ public class Hash {
 
 	public static void md2Hash() {
 		System.out.println("");
-		System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
+		System.out.println("Veuillez entrer la phrase à hasher : ");
 		System.out.println("");
 		String md2String = sc.nextLine();
 		String md2Hex = DigestUtils.md2Hex(md2String);
@@ -28,7 +28,7 @@ public class Hash {
 	
 	public static void md5Hash() {
 		System.out.println("");
-		System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
+		System.out.println("Veuillez entrer la phrase à hasher : ");
 		System.out.println("");
 		String md5String = sc.nextLine();
 		String md5Hex = DigestUtils.md5Hex(md5String);
@@ -41,7 +41,7 @@ public class Hash {
 	
 	public static void sha1Hash() {
 		System.out.println("");
-		System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
+		System.out.println("Veuillez entrer la phrase à hasher : ");
 		System.out.println("");
 		String sha1String = sc.nextLine();
 		String sha1Hex = DigestUtils.sha1Hex(sha1String);
@@ -54,7 +54,7 @@ public class Hash {
 	
 	public static void sha2Hash() {
 		System.out.println("");
-		System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
+		System.out.println("Veuillez entrer la phrase à hasher : ");
 		System.out.println("");
 		String sha2String = sc.nextLine();
 		String sha2Hex = DigestUtils.sha256Hex(sha2String);
@@ -67,7 +67,7 @@ public class Hash {
 	
 	public static void sha3Hash() {
 		System.out.println("");
-		System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
+		System.out.println("Veuillez entrer la phrase à hasher : ");
 		System.out.println("");
 		String sha3String = sc.nextLine();
 		String sha3Hex = DigestUtils.sha384Hex(sha3String);
@@ -80,7 +80,7 @@ public class Hash {
 	
 	public static void sha5Hash() {
 		System.out.println("");
-		System.out.println("Veuillez entrer la phrase à crypter/hasher : ");
+		System.out.println("Veuillez entrer la phrase à hasher : ");
 		System.out.println("");
 		String sha5String = sc.nextLine();
 		String sha5Hex = DigestUtils.sha512Hex(sha5String);

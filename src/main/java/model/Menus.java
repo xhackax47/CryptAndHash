@@ -25,8 +25,8 @@ public class Menus {
 		System.out.println("CRYPTAGE");
 		System.out.println("");
 		System.out.println("-------------------------\n");
-		System.out.println("1 - Cryptage niveau SECRET (AES128)");
-		System.out.println("2 - Cryptage niveau TOP-SECRET (AES192, AES256)");
+		System.out.println("1 - Cryptage niveau SECRET (AES)");
+		System.out.println("2 - Cryptage niveau TOP-SECRET (RSA)");
 		System.out.println("3 - Revenir au menu général");
 		System.out.println("");
 		System.out.println("Choisissez le niveau à utiliser : ");
@@ -47,6 +47,28 @@ public class Menus {
 		System.out.println("7 - Revenir au menu général");
 		System.out.println("");
 		System.out.println("Choisissez l'algorithme à utiliser : ");
+		System.out.println("");
+	}
+	
+	public static void afficheMenuSecret() {
+		System.out.println("");
+		System.out.println("CRYPTAGE SECRET (AES)");
+		System.out.println("");
+		System.out.println("-------------------------\n");
+		System.out.println("1 - Encryptage Fichier");
+		System.out.println("2 - Décryptage Fichier");
+		System.out.println("3 - Revenir au menu de cryptage");
+		System.out.println("");
+	}
+	
+	public static void afficheMenuTopSecret() {
+		System.out.println("");
+		System.out.println("CRYPTAGE TOP SECRET (RSA)");
+		System.out.println("");
+		System.out.println("-------------------------\n");
+		System.out.println("1 - Encryptage Fichier");
+		System.out.println("2 - Décryptage Fichier");
+		System.out.println("3 - Revenir au menu de cryptage");
 		System.out.println("");
 	}
 

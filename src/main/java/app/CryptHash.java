@@ -22,6 +22,7 @@ public class CryptHash {
 
 		System.out.println("Bienvenue dans le programme CryptAndHash");
 		System.out.println("");
+		
 		try {
 			Thread.sleep(3*1000);
 		} catch (InterruptedException e1) {
