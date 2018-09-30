@@ -54,5 +54,3 @@ Git.
 ## Auteurs
 
 * **Samy CHAABI** - *Developer* - [Hacka47](https://github.com/xhackax47)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
