@@ -1,4 +1,7 @@
-CryptAndHash - Logiciel de Cryptage et Hashage de chaŒnes de caractŠres en console 
+CryptAndHash - Logiciel de Cryptage et Hashage de chaŒnes de caractŠres
+
+ENCRYPTAGE/DECRYPTAGE DE FICHIER EN COURS DE DEVELOPPEMENT...
+GUI EN COURS DE DEVELOPPEMENT...
 
 Ce logiciel sert à transformer des chaînes de caractères en chaine de hashage bien badass que vous pouvez utiliser comme mot de passe voir pour certains plutôt comme phrase de passe.
 
@@ -23,8 +26,6 @@ SHA384 : 7b8f4654076b80eb963911f19cfad1aaf4285ed48e826f6cde1b01a79aa73fadb5446e6
 
 
 SHA512 : c6ee9e33cf5c6715a1d148fd73f7318884b41adcb916021e2bc0e800a5c5dd97f5142178f6ae88c8fdd98e1afb0ce4c8d2c54b5f37b30b7da1997bb33b0b8a31
-
-
 
 Parfait pour générer des mots de passe très difficile à casser avec un simple mot ou suite que vous avez déjà en mémoire.
 
