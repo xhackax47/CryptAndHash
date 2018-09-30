@@ -1,9 +1,9 @@
-package app;
-
 /**
  * 
  * @author CHAABI Samy
  */
+
+package app;
 
 import java.util.Scanner;
 

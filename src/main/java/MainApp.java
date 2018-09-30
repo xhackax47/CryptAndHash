@@ -1,9 +1,9 @@
-import app.CryptHash;
-
 /**
  * 
  * @author CHAABI Samy
  */
+
+import app.CryptHash;
 
 public class MainApp {
 

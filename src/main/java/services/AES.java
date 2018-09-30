@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author CHAABI Samy
+ */
+
 package services;
 
 import java.io.FileInputStream;
@@ -18,6 +23,8 @@ import javax.crypto.SecretKey;
 
 public class AES {
 	
+	
+	// Generation de clé AES
 	public static void generateKey(String outputFileName) {
 		try {
 			KeyGenerator keygen = KeyGenerator.getInstance("AES");
@@ -32,6 +39,7 @@ public class AES {
 		}
 	}
 
+	// Cryptage de fichier
 	public static void encryptFile(String inputFileName, String outputFileName, String keyFileName, int mode) {
 		InputStream in = null;
 		OutputStream out = null;
@@ -53,6 +61,7 @@ public class AES {
 		}
 	}
 
+	// Cryptage de flux
 	private static void crypt(InputStream in, OutputStream out, Cipher cipher)
 			throws IOException, GeneralSecurityException {
 		int blockSize = cipher.getBlockSize();
