@@ -16,7 +16,9 @@ import java.util.Scanner;
 import javax.crypto.Cipher;
 import javax.crypto.SealedObject;
 
+import model.AES;
 import model.Menus;
+import model.RSA;
 
 public class Crypt {
 

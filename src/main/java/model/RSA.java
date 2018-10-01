@@ -1,4 +1,4 @@
-package services;
+package model;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

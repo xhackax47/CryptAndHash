@@ -3,7 +3,7 @@
  * @author CHAABI Samy
  */
 
-package services;
+package model;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
