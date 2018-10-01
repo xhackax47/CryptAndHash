@@ -7,7 +7,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CryptAndHash</name>
 	<description>Logiciel de Cryptage et Hashage de chaînes de caractères en console</description>
-	
+
 	<developers>
 		<developer>
 			<id>xhackax47</id>
@@ -26,7 +26,7 @@
 			</properties>
 		</developer>
 	</developers>
-	
+
 	<properties>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -48,7 +48,7 @@
 			<version>1.11</version>
 		</dependency>
 
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<version>5.3.1</version>
@@ -56,16 +56,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<version>42.2.5</version>
-		</dependency>
-
-		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -77,20 +72,9 @@
 			<version>${slf4j.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-core</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-hikaricp</artifactId>
-			<version>${hibernate.version}</version>
-		</dependency>
-
-		Java 6 = JAX-B Version 2.0
-		Java 7 = JAX-B Version 2.2.3
-		Java 8 = JAX-B Version 2.2.8
+		<!-- Java 6 = JAX-B Version 2.0 
+		Java 7 = JAX-B Version 2.2.3 
+		Java 8 = JAX-B Version 2.2.8 -->
 		<dependency>
 			<groupId>javax.xml.bind</groupId>
 			<artifactId>jaxb-api</artifactId>
@@ -110,7 +94,25 @@
 			<groupId>javax.activation</groupId>
 			<artifactId>activation</artifactId>
 			<version>1.1.1</version>
-		</dependency> -->
+		</dependency>
+
+<!-- 		<dependency> 
+			<groupId>org.postgresql</groupId> 
+			<artifactId>postgresql</artifactId> 
+			<version>42.2.5</version> 
+			</dependency> 
+			
+			<dependency> 
+			<groupId>org.hibernate</groupId> 
+			<artifactId>hibernate-core</artifactId> 
+			<version>${hibernate.version}</version> 
+			</dependency> 
+			
+			<dependency> 
+			<groupId>org.hibernate</groupId> 
+			<artifactId>hibernate-hikaricp</artifactId> 
+			<version>${hibernate.version}</version> 
+			</dependency> 		-->
 
 	</dependencies>
 
