@@ -155,7 +155,11 @@ public class CryptHash {
 			e.printStackTrace();
 		}
 		
+		// Nettoyage et fermeture du programme
 		sc.close();
+		System.out.checkError();
+		System.out.flush();
+		System.out.close();
 		
 	}
 
