@@ -14,7 +14,6 @@ import model.Menus;
 public class CryptHash {
 
 	public static void start(){
-
 		final Scanner sc = new Scanner(System.in);
 		int choixHash;
 		int choixCrypt;
@@ -62,7 +61,11 @@ public class CryptHash {
 						break;
 
 					case 2:
-						Crypt.topSecretCrypt();
+						try {
+							Crypt.topSecretCrypt();
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
 						break;
 					// Cas de condition de fin de boucle
 					case 3:
@@ -154,11 +157,8 @@ public class CryptHash {
 			e.printStackTrace();
 		}
 		
-		// Nettoyage et fermeture du programme
-		System.out.checkError();
-		System.out.flush();
 		sc.close();
-		System.out.close();
+		
 	}
 
 }

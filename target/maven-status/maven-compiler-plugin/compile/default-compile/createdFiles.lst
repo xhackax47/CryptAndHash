@@ -3,4 +3,5 @@ services\Hash.class
 MainApp.class
 model\Menus.class
 services\Crypt.class
+services\RSA.class
 app\CryptHash.class
