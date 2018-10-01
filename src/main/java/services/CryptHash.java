@@ -3,12 +3,10 @@
  * @author CHAABI Samy
  */
 
-package app;
+package services;
 
 import java.util.Scanner;
 
-import services.Crypt;
-import services.Hash;
 import model.Menus;
 
 public class CryptHash {

@@ -1,11 +1,12 @@
+package app;
 /**
  * 
  * @author CHAABI Samy
  */
 
-import app.CryptHash;
+import services.CryptHash;
 
-public class MainApp {
+public class CryptAndHash {
 
 	public static void main(String[] args) {	
 		
