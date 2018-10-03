@@ -49,6 +49,7 @@ PS : Evitez le Message Digest 2 ou 5 si vous cherchez de la grosse sécurité ma
 * [Apache Commons Codec](https://commons.apache.org/) - Composant Java
 * [Maven](https://maven.apache.org/) - Gestion de projet et de dépendances
 * [Launch4J](http://launch4j.sourceforge.net/) - Outil de transformation de JAR en executable Windows.
+* [CodeFactor](https://www.codefactor.io/repository/github/xhackax47/cryptandhash) - Analyseur de code.
 
 ## Versioning
 
