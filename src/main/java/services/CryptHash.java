@@ -21,7 +21,7 @@ public class CryptHash {
 		System.out.println("");
 		
 		try {
-			Thread.sleep(3*1000);
+			Thread.sleep(1*1000);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
