@@ -1,5 +1,5 @@
 ---
-name: 🚀 Feature Request
+name: "\U0001F680 Feature Request"
 about: J'ai une suggestion et j'aimerais la voir sur ton appli!
 
 ---

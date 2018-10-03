@@ -1,5 +1,5 @@
 ---
-name: 🐛 Bug Report
+name: "\U0001F41B Bug Report"
 about: Si quelque chose se passe mal...
 
 ---
