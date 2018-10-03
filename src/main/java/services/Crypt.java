@@ -87,8 +87,8 @@ public class Crypt {
 		KeyPair keyPair = RSA.generateKeyPair();
 		PublicKey pubKey = keyPair.getPublic();
 		PrivateKey privateKey = keyPair.getPrivate();
-		RSA.sauvegardeClePublique(pubKey, "pubKey.txt");
-		RSA.sauvegardeClePrivee(privateKey, "privateKey.txt");
+		PublKey.sauvegardeClePublique(pubKey, "pubKey.txt");
+		PrivKey.sauvegardeClePrivee(privateKey, "privateKey.txt");
 
 		Thread.sleep(1 * 1000);
 
@@ -142,7 +142,7 @@ public class Crypt {
 				System.out.println("Veuillez indiquer le message à crypter (RSA): ");
 				System.out.println("");
 
-				PublicKey clePublique = RSA.lectureClePublique("pubKey.txt");
+				PublicKey clePublique = PublKey.lectureClePublique("pubKey.txt");
 				byte[] bytes = null;
 
 				// Cryptage message
