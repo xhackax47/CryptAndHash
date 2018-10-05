@@ -44,9 +44,9 @@ public class Crypt {
 
 			case 1:
 				// TO-DO Faire le choix du chemin du fichier avec une variable
-				String keyCryptPathAES = "D:\\\\\\eclipse-workspace\\test\\keys\\AESKEY";
-				String iCryptFile = "D:\\\\\\eclipse-workspace\\test\\test.pdf";
-				String oCryptFile = "D:\\\\\\eclipse-workspace\\test\\testCrypt.cpdf";
+				String keyCryptPathAES = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\keys\\AESKEY";
+				String iCryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\test.pdf";
+				String oCryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\testCrypt.cpdf";
 
 				System.out.println("");
 				System.out.println("Veuillez indiquer le fichier à crypter (AES): ");
@@ -56,9 +56,9 @@ public class Crypt {
 				AES.encryptFile(iCryptFile, oCryptFile, keyCryptPathAES, Cipher.ENCRYPT_MODE);
 				break;
 			case 2:
-				String keyDecryptPathAES = "D:\\\\\\eclipse-workspace\\test\\keys\\AESKEY";
-				String iDecryptFile = "D:\\\\\\eclipse-workspace\\test\\testCrypt.cpdf";
-				String oDecryptFile = "D:\\\\\\eclipse-workspace\\test\\test.pdf";
+				String keyDecryptPathAES = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\keys\\AESKEY";
+				String iDecryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\testCrypt.cpdf";
+				String oDecryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\test.pdf";
 
 				System.out.println("");
 				System.out.println("Veuillez indiquer le fichier à décrypter (AES): ");
@@ -87,8 +87,8 @@ public class Crypt {
 		KeyPair keyPair = RSA.generateKeyPair();
 		PublicKey pubKey = keyPair.getPublic();
 		PrivateKey privateKey = keyPair.getPrivate();
-		PublKey.sauvegardeClePublique(pubKey, "testsCrypt\\pubKey.txt");
-		PrivKey.sauvegardeClePrivee(privateKey, "testsCrypt\\privateKey.txt");
+		PublKey.sauvegardeClePublique(pubKey, "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\pubKey.txt");
+		PrivKey.sauvegardeClePrivee(privateKey, "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\privateKey.txt");
 
 		Thread.sleep(1 * 1000);
 
@@ -112,14 +112,15 @@ public class Crypt {
 				System.out.println("Veuillez indiquer le fichier à crypter (RSA): ");
 				System.out.println("");
 
-				File input = new File("C:\\\\Users\\formation\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
-				File output = new File("C:\\\\Users\\formation\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
+				File input = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
+				File output = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
 				FileInputStream fis = new FileInputStream(input);
 				FileOutputStream fos = new FileOutputStream(output);
+				
 				break;
 			case 2:
-				File i2 = new File("C:\\\\Users\\formation\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
-				File o2 = new File("C:\\\\Users\\formation\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
+				File i2 = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
+				File o2 = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
 				FileInputStream fis2 = new FileInputStream(i2);
 				FileOutputStream fos2 = new FileOutputStream(o2);
 
@@ -132,73 +133,7 @@ public class Crypt {
 				cipherDF.init(Cipher.DECRYPT_MODE, privateKey);
 				break;
 			case 3:
-				// Cryptage fichier
-//				File i3 = new File("C:\\\\Users\\formation\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
-//				File o3 = new File("C:\\\\Users\\formation\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
-//				FileInputStream fis3 = new FileInputStream(i3);
-//				FileOutputStream fos3 = new FileOutputStream(o3);
-
-				System.out.println("");
-				System.out.println("Veuillez indiquer le message à crypter (RSA): ");
-				System.out.println("");
-
-				PublicKey clePublique = PublKey.lectureClePublique("testsCrypt\\pubKey.txt");
-				byte[] bytes = null;
-
-				// Cryptage message
-				Cipher cipherE = Cipher.getInstance("RSA");
-				cipherE.init(Cipher.ENCRYPT_MODE, clePublique);
-
-				String stringOriginal = new String(sc.nextLine());
-				SealedObject encrypted = new SealedObject(stringOriginal, cipherE);
-
-
-				bytes = cipherE.doFinal(stringOriginal.getBytes());
-
-				FileOutputStream fE = new FileOutputStream("testsCrypt\\Msgencrypted.txt");
-				fE.write(bytes);
 				
-
-				System.out.println("");
-				System.out.println("Message original : ");
-				System.out.println("");
-				System.out.println(stringOriginal);
-				System.out.println("");
-				System.out.println("Message encrypté RSA : ");
-				FileInputStream fI = new FileInputStream("testsCrypt\\Msgencrypted.txt");
-				System.out.println(fI.read());
-				System.out.println("");
-				System.out.println("");
-				fE.close();
-				break;
-			case 4:
-				System.out.println("");
-				System.out.println("Veuillez indiquer le message à décrypter (RSA): ");
-				System.out.println("");
-				// Cryptage message
-
-				Cipher cipherD = Cipher.getInstance("RSA");
-				cipherD.init(Cipher.DECRYPT_MODE, privateKey);
-
-				String stringEncrypted = new String(sc.nextLine());
-				SealedObject decrypted = new SealedObject(stringEncrypted, cipherD);
-				
-				
-//				FileInputStream fiD = new FileInputStream("testsCrypt\\Msgencrypted.txt");
-//				FileOutputStream fD = new FileOutputStream("testsCrypt\\Msgdecrypted.txt");
-				System.out.println("Message original encrypté RSA : ");
-				System.out.println("");
-				System.out.println(stringEncrypted);
-				System.out.println("");
-				System.out.println("Message décrypté  : ");
-				System.out.println(decrypted.toString());
-				System.out.println("");
-				System.out.println("");
-				break;
-			case 5:
-				
-				break;
-			case 6:
 				break;
 			default:
 				System.out.println("");
@@ -207,7 +142,7 @@ public class Crypt {
 				break;
 			}
 
-		} while (choixMenuTopSecret != 5);
+		} while (choixMenuTopSecret != 3);
 
 	}
 

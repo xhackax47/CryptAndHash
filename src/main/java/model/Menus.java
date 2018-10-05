@@ -68,9 +68,7 @@ public class Menus {
 		System.out.println("-------------------------\n");
 		System.out.println("1 - Encryptage Fichier");
 		System.out.println("2 - Décryptage Fichier");
-		System.out.println("3 - Encryptage Message");
-		System.out.println("4 - Décryptage Message");
-		System.out.println("5 - Revenir au menu de cryptage");
+		System.out.println("3 - Revenir au menu de cryptage");
 		System.out.println("");
 	}
 
