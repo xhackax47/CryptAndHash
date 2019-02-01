@@ -6,7 +6,9 @@
 package model;
 
 public class Menus {
-	
+
+	static int menuG, menuC, menuH, menuS, menuTS = 0;
+
 	public static void afficheMenuGeneral() {
 		System.out.println("");
 		System.out.println("Menu Général");
@@ -18,8 +20,9 @@ public class Menus {
 		System.out.println("");
 		System.out.println("Choisissez la fonction à utiliser : ");
 		System.out.println("");
+		menuG = 1;
 	}
-	
+
 	public static void afficheMenuCryptage() {
 		System.out.println("");
 		System.out.println("CRYPTAGE");
@@ -31,8 +34,9 @@ public class Menus {
 		System.out.println("");
 		System.out.println("Choisissez le niveau à utiliser : ");
 		System.out.println("");
+		menuC = 1;
 	}
-	
+
 	public static void afficheMenuHashage() {
 		System.out.println("");
 		System.out.println("HASHAGE");
@@ -48,8 +52,9 @@ public class Menus {
 		System.out.println("");
 		System.out.println("Choisissez l'algorithme à utiliser : ");
 		System.out.println("");
+		menuH = 1;
 	}
-	
+
 	public static void afficheMenuSecret() {
 		System.out.println("");
 		System.out.println("CRYPTAGE SECRET (AES)");
@@ -59,8 +64,9 @@ public class Menus {
 		System.out.println("2 - Décryptage Fichier");
 		System.out.println("3 - Revenir au menu de cryptage");
 		System.out.println("");
+		menuS = 1;
 	}
-	
+
 	public static void afficheMenuTopSecret() {
 		System.out.println("");
 		System.out.println("CRYPTAGE TOP SECRET (RSA)");
@@ -70,6 +76,27 @@ public class Menus {
 		System.out.println("2 - Décryptage Fichier");
 		System.out.println("3 - Revenir au menu de cryptage");
 		System.out.println("");
+		menuTS = 1;
+	}
+
+	public static int getMenuG() {
+		return menuG;
+	}
+
+	public static int getMenuC() {
+		return menuC;
+	}
+
+	public static int getMenuH() {
+		return menuH;
+	}
+
+	public static int getMenuS() {
+		return menuS;
+	}
+
+	public static int getMenuTS() {
+		return menuTS;
 	}
 
 }

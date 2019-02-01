@@ -14,7 +14,6 @@ import java.security.PublicKey;
 import java.util.Scanner;
 
 import javax.crypto.Cipher;
-import javax.crypto.SealedObject;
 
 import model.AES;
 import model.Menus;

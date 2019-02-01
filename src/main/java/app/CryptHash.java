@@ -12,6 +12,8 @@ import services.Crypt;
 import services.Hash;
 
 public class CryptHash {
+	
+	static int cryptHashON = 0;
 
 	public static void start(){
 		final Scanner sc = new Scanner(System.in);
@@ -27,8 +29,10 @@ public class CryptHash {
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
+		
+		cryptHashON = 1;
 
-		// Ouverture Boucle Programme
+		// Boucle Choix Programme
 		do {
 			Menus.afficheMenuGeneral();
 			String sG = sc.nextLine();
@@ -156,7 +160,7 @@ public class CryptHash {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		
+		cryptHashON = 0;
 		// Nettoyage et fermeture du programme
 		sc.close();
 		System.out.checkError();
@@ -165,4 +169,8 @@ public class CryptHash {
 		
 	}
 
+	public static int getCryptHashON() {
+		return cryptHashON;
+	}
+	
 }
