@@ -24,53 +24,53 @@ public class AWSServiceS3 {
 		this.s3client = s3client;
 	}
 
-	// is bucket exist?
+	// Existence du conteneur
 	public boolean doesBucketExist(String bucketName) {
 		return s3client.doesBucketExist(bucketName);
 	}
 
-	// create a bucket
+	// Creation conteneur
 	public Bucket createBucket(String bucketName) {
 		return s3client.createBucket(bucketName);
 	}
 
-	// list all buckets
+	// Lister conteneurs
 	public List<Bucket> listBuckets() {
 		return s3client.listBuckets();
 	}
 
-	// delete a bucket
+	// Supprimer conteneur
 	public void deleteBucket(String bucketName) {
 		s3client.deleteBucket(bucketName);
 	}
 
-	// uploading object
+	// Upload objet vers conteneur
 	public PutObjectResult putObject(String bucketName, String key, File file) {
 		return s3client.putObject(bucketName, key, file);
 	}
 
-	// listing objects
+	// Lister objets d'un conteneur
 	public ObjectListing listObjects(String bucketName) {
 		return s3client.listObjects(bucketName);
 	}
 
-	// get an object
+	// Recupérer un objet d'un conteneur
 	public S3Object getObject(String bucketName, String objectKey) {
 		return s3client.getObject(bucketName, objectKey);
 	}
 
-	// copying an object
+	// Copier un objet d'un conteneur
 	public CopyObjectResult copyObject(String sourceBucketName, String sourceKey, String destinationBucketName,
 			String destinationKey) {
 		return s3client.copyObject(sourceBucketName, sourceKey, destinationBucketName, destinationKey);
 	}
 
-	// deleting an object
+	// Supprimer un objet d'un conteneur
 	public void deleteObject(String bucketName, String objectKey) {
 		s3client.deleteObject(bucketName, objectKey);
 	}
 
-	// deleting multiple Objects
+	// Supprimer plusieurs objets d'un conteneur
 	public DeleteObjectsResult deleteObjects(DeleteObjectsRequest delObjReq) {
 		return s3client.deleteObjects(delObjReq);
 	}
