@@ -35,7 +35,7 @@ public class AWSApplicationS3 {
 
         bucketName = "cryptandhash-bucket";
 
-        //creating a bucket
+        // Creer un conteneur
         if(awsService.doesBucketExist(bucketName)) {
             System.out.println("Le nom du conteneur n'est pas valide."
               + " Veuillez réessayer avec un autre nom.");
@@ -43,33 +43,33 @@ public class AWSApplicationS3 {
         }
         awsService.createBucket(bucketName);
         
-        //list all the buckets
+        // Lister tous les conteneurs
         for(Bucket s : awsService.listBuckets() ) {
             System.out.println(s.getName());
         }
         
-        //deleting bucket
+        // Supprimer un conteneur
         awsService.deleteBucket("cryptandhash-bucket-test2");
         
-        //uploading object
+        // Uploader un objet sur le conteneur
         awsService.putObject(
           bucketName, 
           "Document/hello.txt",
           new File("/Users/user/Document/hello.txt")
         );
 
-        //listing objects
+        // Lister les objets d'un conteneur
         ObjectListing objectListing = awsService.listObjects(bucketName);
         for(S3ObjectSummary os : objectListing.getObjectSummaries()) {
             System.out.println(os.getKey());
         }
 
-        //downloading an object
+        // Telecharger un objet d'un conteneur
         S3Object s3object = awsService.getObject(bucketName, "Document/hello.txt");
         S3ObjectInputStream inputStream = s3object.getObjectContent();
         FileUtils.copyInputStreamToFile(inputStream, new File("/Users/user/Desktop/hello.txt"));
         
-        //copying an object
+        // Copier un objet d'un conteneur
         awsService.copyObject(
           "cryptandhash-bucket", 
           "picture/pic.png", 
@@ -77,10 +77,10 @@ public class AWSApplicationS3 {
           "Document/picture.png"
         );
         
-        //deleting an object
+        // Supprimer un objet d'un conteneur
         awsService.deleteObject(bucketName, "Document/hello.txt");
 
-        //deleting multiple objects
+        // Supprimer plusieurs objets d'un conteneur
         String objkeyArr[] = {
           "Document/hello2.txt", 
           "Document/picture.png"
