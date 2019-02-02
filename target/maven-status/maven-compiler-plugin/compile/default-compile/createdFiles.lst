@@ -1,9 +1,13 @@
 app\CryptAndHash.class
-model\AES.class
-services\PrivKey.class
 services\Hash.class
-model\RSA.class
+aws\AWSServiceS3$1.class
 model\Menus.class
 services\Crypt.class
 app\CryptHash.class
+model\AES.class
+services\PrivKey.class
+aws\MultipartUpload.class
+model\RSA.class
+aws\AWSApplicationS3.class
+aws\AWSServiceS3.class
 services\PublKey.class

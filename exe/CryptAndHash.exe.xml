@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
-  <headerType>console</headerType>
+  <headerType>gui</headerType>
   <jar>C:\Users\Megaport\git\CryptAndHash\target\CryptAndHash-0.0.1-SNAPSHOT.jar</jar>
   <outfile>C:\Users\Megaport\git\CryptAndHash\exe\CryptAndHash.exe</outfile>
-  <errTitle></errTitle>
+  <errTitle>Problème Java, essayer de réinstaller Java version 8 (JVM ou JDK)</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>
   <downloadUrl>http://java.com/download</downloadUrl>
   <supportUrl></supportUrl>
-  <stayAlive>true</stayAlive>
+  <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
   <icon>C:\Users\Megaport\Downloads\Alecive-Flatwoken-Apps-Keys.ico</icon>

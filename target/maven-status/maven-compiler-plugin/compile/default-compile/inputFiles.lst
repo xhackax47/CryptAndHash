@@ -1,9 +1,12 @@
 C:\Users\Megaport\git\CryptAndHash\src\main\java\services\PrivKey.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\services\PublKey.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\model\AES.java
+C:\Users\Megaport\git\CryptAndHash\src\main\java\aws\AWSApplicationS3.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\services\Crypt.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\model\Menus.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\services\Hash.java
+C:\Users\Megaport\git\CryptAndHash\src\main\java\aws\AWSServiceS3.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\app\CryptAndHash.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\model\RSA.java
 C:\Users\Megaport\git\CryptAndHash\src\main\java\app\CryptHash.java
+C:\Users\Megaport\git\CryptAndHash\src\main\java\aws\MultipartUpload.java
