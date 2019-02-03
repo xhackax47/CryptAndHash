@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author CHAABI Samy
+ */
+
 package aws;
 
 import com.amazonaws.AmazonClientException;

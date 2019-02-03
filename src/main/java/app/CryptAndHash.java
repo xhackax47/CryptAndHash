@@ -1,8 +1,9 @@
-package app;
 /**
  * 
  * @author CHAABI Samy
  */
+
+package app;
 
 public class CryptAndHash {
 

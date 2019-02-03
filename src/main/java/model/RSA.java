@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author CHAABI Samy
+ */
+
 package model;
 
 import java.security.KeyPair;
