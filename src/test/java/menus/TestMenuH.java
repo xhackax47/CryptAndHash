@@ -11,7 +11,7 @@ public class TestMenuH {
 	@Test
 	public void testMenuH() {
 		
-		assertEquals(0,Menus.getMenuH());
+		assertEquals(false,Menus.isMenuH());
 		
 		// Une fois vérifié que la variable est bien égale à 0 au départ on appelle la methode.
 		
@@ -19,7 +19,7 @@ public class TestMenuH {
 		
 		// Nous testons les différents affichages de menus en vérifiant que la variable est bien passé de 0 à 1.
 		
-		assertEquals(1,Menus.getMenuH());
+		assertEquals(true,Menus.isMenuH());
 		
 	}
 

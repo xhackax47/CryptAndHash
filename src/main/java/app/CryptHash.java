@@ -12,24 +12,25 @@ import services.Crypt;
 import services.Hash;
 
 public class CryptHash {
-	
+
 	static int cryptHashON = 0;
 
-	public static void start(){
+	public static void start() {
 		final Scanner sc = new Scanner(System.in);
 		int choixHash;
 		int choixCrypt;
+		int choixAWS;
 		int choixGeneral;
 
 		System.out.println("Bienvenue dans le programme CryptAndHash");
 		System.out.println("");
-		
+
 		try {
-			Thread.sleep(1*1000);
+			Thread.sleep(1 * 1000);
 		} catch (InterruptedException e1) {
 			e1.printStackTrace();
 		}
-		
+
 		cryptHashON = 1;
 
 		// Boucle Choix Programme
@@ -46,6 +47,50 @@ public class CryptHash {
 
 			// Options Menu Général
 			switch (choixGeneral) {
+
+			// MENU AWS
+			case 0:
+				do {
+					Menus.afficheMenuAWS();
+					String sA = sc.nextLine();
+
+					// Gestion Exception
+					try {
+						choixAWS = Integer.parseInt(sA);
+					} catch (NumberFormatException e) {
+						choixAWS = 0;
+					}
+
+					switch (choixAWS) {
+
+					case 1:
+//						FAIRE LA BOUCLE DES MENUS AWS
+						Menus.afficheMenuAWSEC2();
+						break;
+
+					case 2:
+//						FAIRE LA BOUCLE DES MENUS AWS
+						Menus.afficheMenuAWSS3();
+						break;
+
+					// Cas de condition de fin de boucle
+					case 3:
+						break;
+
+					default:
+						System.out.println("");
+						System.out.println("Choix inconnu, veuillez recommencer");
+						System.out.println("");
+						break;
+					}
+
+				}
+
+				// Condition de fin de boucle Menu AWS
+				while (choixAWS != 3);
+				break;
+
+			// MENU CRYPTAGE
 			case 1:
 				do {
 					Menus.afficheMenuCryptage();
@@ -87,6 +132,7 @@ public class CryptHash {
 				while (choixCrypt != 3);
 				break;
 
+			// MENU HASHAGE
 			case 2:
 				do {
 					Menus.afficheMenuHashage();
@@ -132,7 +178,7 @@ public class CryptHash {
 						break;
 					}
 				}
-				
+
 				// Condition de fin de boucle Menu Hash
 				while (choixHash != 7);
 				break;
@@ -149,14 +195,14 @@ public class CryptHash {
 			}
 
 		}
-		
+
 		// Condition de fin de boucle du programme
 		while (choixGeneral != 3);
 
 		System.out.println("");
 		System.out.println("Au revoir et merci d'avoir utilisé ce programme");
 		try {
-			Thread.sleep(3*1000);
+			Thread.sleep(3 * 1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
@@ -166,11 +212,11 @@ public class CryptHash {
 		System.out.checkError();
 		System.out.flush();
 		System.out.close();
-		
+
 	}
 
 	public static int getCryptHashON() {
 		return cryptHashON;
 	}
-	
+
 }
