@@ -1,6 +1,11 @@
-application\TestProgramStart.class
+aws\TestAWSVirtualMachinesOperations.class
+menus\TestMenuAWSEC2.class
+aws\TestAWSBucketOperations.class
 menus\TestMenuH.class
+menus\TestMenuAWS.class
+application\TestProgramStart.class
 menus\TestMenuS.class
 menus\TestMenuG.class
 menus\TestMenuTS.class
+menus\TestMenuAWSS3.class
 menus\TestMenuC.class

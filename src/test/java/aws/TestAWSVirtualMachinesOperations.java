@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TestAWSBucketOperations {
+public class TestAWSVirtualMachinesOperations {
 
 //	@Test
 //	public void test() {
