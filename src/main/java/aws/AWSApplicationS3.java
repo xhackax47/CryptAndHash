@@ -1,4 +1,4 @@
-/**
+﻿/**
  * 
  * @author CHAABI Samy
  */
@@ -80,8 +80,9 @@ public class AWSApplicationS3 {
 	// Telecharger un objet d'un conteneur
 	public static void downloadObjectFromBucket(String bucketName) throws IOException {
 	S3Object s3object = awsService.getObject(bucketName, "Document/hello.txt");
-	S3ObjectInputStream inputStream = s3object
-			.getObjectContent();FileUtils.copyInputStreamToFile(inputStream,new File("/Users/user/Desktop/hello.txt"));
+	S3ObjectInputStream inputStream = s3object.getObjectContent();
+
+	FileUtils.copyInputStreamToFile(inputStream,new File("/Users/user/Desktop/hello.txt"));
 	}
 	
 	// Copier un objet d'un conteneur
@@ -98,8 +99,8 @@ public class AWSApplicationS3 {
 	public static void deleteObjectsFromBucket(String bucketName) {
 	String objkeyArr[] = { "Document/hello2.txt", "Document/picture.png" };
 
-	DeleteObjectsRequest delObjReq = new DeleteObjectsRequest(bucketName)
-			.withKeys(objkeyArr);awsService.deleteObjects(delObjReq);
+	DeleteObjectsRequest delObjReq = new DeleteObjectsRequest(bucketName).withKeys(objkeyArr);
+	awsService.deleteObjects(delObjReq);
 	}
 
 	public static String getBucketName() {
