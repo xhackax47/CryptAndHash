@@ -1,7 +1,10 @@
 # CryptAndHash - Logiciel de Cryptage et Hashage
 
-ENCRYPTAGE/DECRYPTAGE DE FICHIER EN COURS DE DEVELOPPEMENT... 
-GUI EN COURS DE DEVELOPPEMENT...
+ENCRYPTAGE/DECRYPTAGE DE FICHIER RSA EN COURS DE DEVELOPPEMENT => 85%
+
+FONCTIONNALITES AWS EN COURS DE DEVELOPPEMENT => 60%
+
+GUI EN COURS DE DEVELOPPEMENT => 5%
 
 ## Description
 
@@ -39,7 +42,11 @@ Aucune installation pour l'instant n'est nécessaire seulement l'execution de l'
 
 ## Tests
 
-Vous pouvez tester ce logiciel en lancant seulement CryptAndHash.exe sur votre Windows directement, si vous avez un doute sur le logiciel je vous invite à consulter et analyser son code directement ici.
+Pour les développeurs, vous pouvez lancer une batterie de tests Junit programmés par mes soins en cas de problème.
+
+Vous pouvez tester ce logiciel en executant seulement CryptAndHash.exe sur votre Windows directement, si vous avez un doute sur le logiciel je vous invite à consulter et analyser son code directement ici.
+
+Si la version Executable Windows ne marche pas, utiliser le .jar dans le dossier target.
 
 PS : Evitez le Message Digest 2 ou 5 si vous cherchez de la grosse sécurité mais taper plus sur du SHA3 ou SHA5.
 
@@ -47,7 +54,9 @@ PS : Evitez le Message Digest 2 ou 5 si vous cherchez de la grosse sécurité ma
 ## Outils
 
 * [Apache Commons Codec](https://commons.apache.org/) - Composant Java
+* [AWS SDK](https://aws.amazon.com/fr/sdk-for-java/) - Kit de développement Amazon Web Services
 * [Maven](https://maven.apache.org/) - Gestion de projet et de dépendances
+* [JUnit](https://junit.org/junit4/) - Framework de développement et d'execution de tests unitaires
 * [Launch4J](http://launch4j.sourceforge.net/) - Outil de transformation de JAR en executable Windows.
 * [CodeFactor](https://www.codefactor.io/repository/github/xhackax47/cryptandhash) - Analyseur de code.
 
