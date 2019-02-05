@@ -113,7 +113,6 @@ public class MenusAWS {
 				try {
 					AWSApplicationS3.downloadObjectFromBucket(bucketNameDlObj);
 				} catch (IOException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				break;
