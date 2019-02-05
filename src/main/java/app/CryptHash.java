@@ -25,12 +25,6 @@ public class CryptHash {
 		System.out.println("Bienvenue dans le programme CryptAndHash");
 		System.out.println("");
 
-		try {
-			Thread.sleep(1 * 1000);
-		} catch (InterruptedException e1) {
-			e1.printStackTrace();
-		}
-
 		cryptHashON = 1;
 
 		// Boucle Choix Programme
@@ -38,11 +32,11 @@ public class CryptHash {
 			Menus.afficheMenuGeneral();
 			String sG = sc.nextLine();
 
-			// Gestion Exception
+			// Gestion NumberFormatException
 			try {
 				choixGeneral = Integer.parseInt(sG);
 			} catch (NumberFormatException e) {
-				choixGeneral = 0;
+				choixGeneral = 10; // Entrée dans default et relancement du menu pour nouveau choix
 			}
 
 			// Options Menu Général
@@ -54,7 +48,7 @@ public class CryptHash {
 					Menus.afficheMenuAWS();
 					String sA = sc.nextLine();
 
-					// Gestion Exception
+					// Gestion NumberFormatException
 					try {
 						choixAWS = Integer.parseInt(sA);
 					} catch (NumberFormatException e) {
@@ -73,10 +67,6 @@ public class CryptHash {
 						Menus.afficheMenuAWSS3();
 						break;
 
-					// Cas de condition de fin de boucle
-					case 3:
-						break;
-
 					default:
 						System.out.println("");
 						System.out.println("Choix inconnu, veuillez recommencer");
@@ -85,7 +75,6 @@ public class CryptHash {
 					}
 
 				}
-
 				// Condition de fin de boucle Menu AWS
 				while (choixAWS != 3);
 				break;
@@ -96,7 +85,7 @@ public class CryptHash {
 					Menus.afficheMenuCryptage();
 					String sC = sc.nextLine();
 
-					// Gestion Exception
+					// Gestion NumberFormatException
 					try {
 						choixCrypt = Integer.parseInt(sC);
 					} catch (NumberFormatException e) {
@@ -115,9 +104,6 @@ public class CryptHash {
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
-						break;
-					// Cas de condition de fin de boucle
-					case 3:
 						break;
 
 					default:
@@ -138,14 +124,12 @@ public class CryptHash {
 					Menus.afficheMenuHashage();
 					String sH = sc.nextLine();
 
-					// Gestion Exception
+					// Gestion NumberFormatException
 					try {
 						choixHash = Integer.parseInt(sH);
 					} catch (NumberFormatException e) {
 						choixHash = 0;
 					}
-
-					System.out.println("");
 
 					// Options menu
 					switch (choixHash) {
@@ -166,9 +150,6 @@ public class CryptHash {
 						break;
 					case 6:
 						Hash.sha5Hash();
-						break;
-					// Cas de Condition de fin de boucle Menu Hash
-					case 7:
 						break;
 					// Gestion des erreurs de saisie dans le choix
 					default:
@@ -206,13 +187,12 @@ public class CryptHash {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		cryptHashON = 0;
 		// Nettoyage et fermeture du programme
 		sc.close();
 		System.out.checkError();
 		System.out.flush();
 		System.out.close();
-
+		cryptHashON = 0;
 	}
 
 	public static int getCryptHashON() {
