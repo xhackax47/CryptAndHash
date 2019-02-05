@@ -21,7 +21,21 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 public class AWSApplicationS3 {
 
 	private static String bucketName;
-	private static final AWSCredentials credentials = new BasicAWSCredentials("access-key", "secret-key");
+	private static final AWSCredentials credentials = new BasicAWSCredentials("ACCESS-KEY-AWS","SECRET-KEY-AWS");
+//	AWSCredentials test = new AWSCredentials() {
+//		
+//		@Override
+//		public String getAWSSecretKey() {
+//			// TODO Auto-generated method stub
+//			return null;
+//		}
+//		
+//		@Override
+//		public String getAWSAccessKeyId() {
+//			// TODO Auto-generated method stub
+//			return null;
+//		}
+//	};
 
 	public static AmazonS3 connect() {
 		AmazonS3 s3client = AmazonS3ClientBuilder.standard()
@@ -35,7 +49,7 @@ public class AWSApplicationS3 {
 	public static void createBucket(String bucketName) {
 		try {
 			if (awsService.doesBucketExistV2(bucketName)) {
-				System.out.println("Le nom du conteneur n'est pas valide." + " Veuillez réessayer avec un autre nom.");
+				System.out.println("Le nom du conteneur est déjà pris." + " Veuillez réessayer avec un autre nom.");
 				return;
 			}
 			awsService.createBucket(bucketName);
@@ -56,46 +70,48 @@ public class AWSApplicationS3 {
 
 	// Supprimer un conteneur
 	public static void deleteBucket(String bucketNameDel) {
-	awsService.deleteBucket(bucketNameDel);
+		awsService.deleteBucket(bucketNameDel);
 	}
+
 	// Uploader un objet sur le conteneur
 	public static void uploadBucket(String bucketNameUp) {
-	awsService.putObject(bucketNameUp,"Document/hello.txt",new File("/Users/user/Document/hello.txt"));
+		awsService.putObject(bucketNameUp, "Tests\\test.pdf",
+				new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsAWS\\test.pdf"));
 	}
-	
+
 	// Lister les objets d'un conteneur
 	public static void listAllObjectsFromBucket(String bucketName) {
-	ObjectListing objectListing = awsService.listObjects(bucketName);for(
-	S3ObjectSummary os:objectListing.getObjectSummaries())
-	{
-		System.out.println(os.getKey());
-	}
+		ObjectListing objectListing = awsService.listObjects(bucketName);
+		for (S3ObjectSummary os : objectListing.getObjectSummaries()) {
+			System.out.println(os.getKey());
+		}
 	}
 
 	// Telecharger un objet d'un conteneur
 	public static void downloadObjectFromBucket(String bucketName) throws IOException {
-	S3Object s3object = awsService.getObject(bucketName, "Document/hello.txt");
-	S3ObjectInputStream inputStream = s3object.getObjectContent();
+		S3Object s3object = awsService.getObject(bucketName, "Tests\\test.pdf");
+		S3ObjectInputStream inputStream = s3object.getObjectContent();
 
-	FileUtils.copyInputStreamToFile(inputStream,new File("/Users/user/Desktop/hello.txt"));
+		FileUtils.copyInputStreamToFile(inputStream,
+				new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsAWS\\testDL.pdf"));
 	}
-	
+
 	// Copier un objet d'un conteneur
-	public static void copyObjectFromBucket(String bucketName) {
-	awsService.copyObject(bucketName,"picture/pic.png","cryptandhash-bucket2","Document/picture.png");
+	public static void copyObjectFromBucket(String bucketName, String destinationBucketName) {
+		awsService.copyObject(bucketName, "Tests\\test.pdf", destinationBucketName, "TestCopy\\test.pdf");
 	}
-	
+
 	// Supprimer un objet d'un conteneur
 	public static void deleteObjectFromBucket(String bucketName) {
-	awsService.deleteObject(bucketName,"Document/hello.txt");
+		awsService.deleteObject(bucketName, "Tests\\test.pdf");
 	}
 
 	// Supprimer plusieurs objets d'un conteneur
 	public static void deleteObjectsFromBucket(String bucketName) {
-	String objkeyArr[] = { "Document/hello2.txt", "Document/picture.png" };
+		String objkeyArr[] = { "Tests\\test.pdf", "TestCopy\\test.pdf" };
 
-	DeleteObjectsRequest delObjReq = new DeleteObjectsRequest(bucketName).withKeys(objkeyArr);
-	awsService.deleteObjects(delObjReq);
+		DeleteObjectsRequest delObjReq = new DeleteObjectsRequest(bucketName).withKeys(objkeyArr);
+		awsService.deleteObjects(delObjReq);
 	}
 
 	public static String getBucketName() {

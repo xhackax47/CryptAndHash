@@ -20,7 +20,7 @@ public class CryptHash {
 	static int choixHash;
 	static int choixCrypt;
 
-	public static void start() {
+	public static void start() throws InterruptedException {
 		cryptHashON = 1;
 		final Scanner sc = new Scanner(System.in);
 

@@ -29,11 +29,14 @@ public class Menus {
 		System.out.println("Amazon Web Services");
 		System.out.println("");
 		System.out.println("-------------------------\n");
+		System.out.println("");
+		System.out.println("INFO : AVANT DE COMMENCER, PENSER A RENSEIGNER VOS PROPRES ACCESS ET SECURITY KEY DANS LE FICHIER AWSApplicationS3.java :");
+		System.out.println("");
 		System.out.println("1 - EC2");
 		System.out.println("2 - S3");
 		System.out.println("3 - Revenir au menu général");
 		System.out.println("");
-		System.out.println("Choisissez le service Amazon à utiliser : ");
+		System.out.println("Choisissez le service AWS à utiliser : ");
 		System.out.println("");
 		menuAWS = true;
 	}
