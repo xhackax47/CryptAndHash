@@ -56,6 +56,7 @@ PS : Evitez le Message Digest 2 ou 5 si vous cherchez de la grosse sécurité ma
 * [Apache Commons Codec](https://commons.apache.org/) - Composant Java
 * [AWS SDK](https://aws.amazon.com/fr/sdk-for-java/) - Kit de développement Amazon Web Services
 * [Maven](https://maven.apache.org/) - Gestion de projet et de dépendances
+* [JUnit](https://junit.org/junit4/) - Framework de développement et d'execution de tests unitaires
 * [Launch4J](http://launch4j.sourceforge.net/) - Outil de transformation de JAR en executable Windows.
 * [CodeFactor](https://www.codefactor.io/repository/github/xhackax47/cryptandhash) - Analyseur de code.
 
