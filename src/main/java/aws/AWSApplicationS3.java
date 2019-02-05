@@ -1,8 +1,3 @@
-﻿/**
- * 
- * @author CHAABI Samy
- */
-
 package aws;
 
 import java.io.File;
