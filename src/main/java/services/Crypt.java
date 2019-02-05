@@ -114,12 +114,11 @@ public class Crypt {
 				File input = new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
 				File output = new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
 				FileInputStream fis = new FileInputStream(input);
-				FileOutputStream fos = new FileOutputStream(output);
-				
+				FileOutputStream fos = new FileOutputStream(output);			
 				break;
 			case 2:
-				File i2 = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
-				File o2 = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
+				File i2 = new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
+				File o2 = new File("\"C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
 				FileInputStream fis2 = new FileInputStream(i2);
 				FileOutputStream fos2 = new FileOutputStream(o2);
 
