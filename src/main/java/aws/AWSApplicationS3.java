@@ -21,7 +21,7 @@ import com.amazonaws.services.s3.model.S3ObjectSummary;
 public class AWSApplicationS3 {
 
 	private static String bucketName;
-	private static final AWSCredentials credentials = new BasicAWSCredentials("<AWS accesskey>", "<AWS secretkey>");
+	private static final AWSCredentials credentials = new BasicAWSCredentials("AKIAIQYNX6WS2L23JVLQ", "4Dgqap1ZLdQ0fp9SMxuFIL+wxnxIkM6s9px8mbbU");
 
 	public static AmazonS3 connect() {
 		AmazonS3 s3client = AmazonS3ClientBuilder.standard()

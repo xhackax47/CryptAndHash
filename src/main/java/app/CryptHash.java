@@ -7,6 +7,7 @@ package app;
 
 import java.util.Scanner;
 
+import aws.MenusAWS;
 import model.Menus;
 import services.Crypt;
 import services.Hash;
@@ -14,18 +15,16 @@ import services.Hash;
 public class CryptHash {
 
 	static int cryptHashON = 0;
+	static int choixAWS;
+	static int choixGeneral;
+	static int choixHash;
+	static int choixCrypt;
 
 	public static void start() {
+		cryptHashON = 1;
 		final Scanner sc = new Scanner(System.in);
-		int choixHash;
-		int choixCrypt;
-		int choixAWS;
-		int choixGeneral;
 
 		System.out.println("Bienvenue dans le programme CryptAndHash");
-		System.out.println("");
-
-		cryptHashON = 1;
 
 		// Boucle Choix Programme
 		do {
@@ -58,13 +57,11 @@ public class CryptHash {
 					switch (choixAWS) {
 
 					case 1:
-//						FAIRE LA BOUCLE DES MENUS AWS
-						Menus.afficheMenuAWSEC2();
+						MenusAWS.menuAWSEC2();
 						break;
 
 					case 2:
-//						FAIRE LA BOUCLE DES MENUS AWS
-						Menus.afficheMenuAWSS3();
+						MenusAWS.menuAWSS3();
 						break;
 
 					default:
@@ -164,9 +161,6 @@ public class CryptHash {
 				while (choixHash != 7);
 				break;
 
-			// Cas de Condition de fin de boucle du programme
-			case 3:
-				break;
 			// Gestion des erreurs de saisie dans le choix
 			default:
 				System.out.println("");

@@ -43,9 +43,9 @@ public class Crypt {
 
 			case 1:
 				// TO-DO Faire le choix du chemin du fichier avec une variable
-				String keyCryptPathAES = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\keys\\AESKEY";
-				String iCryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\test.pdf";
-				String oCryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\testCrypt.cpdf";
+				String keyCryptPathAES = "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\keys\\AESKEY";
+				String iCryptFile = "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\test.pdf";
+				String oCryptFile = "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\testCrypt.cpdf";
 
 				System.out.println("");
 				System.out.println("Veuillez indiquer le fichier à crypter (AES): ");
@@ -55,9 +55,9 @@ public class Crypt {
 				AES.encryptFile(iCryptFile, oCryptFile, keyCryptPathAES, Cipher.ENCRYPT_MODE);
 				break;
 			case 2:
-				String keyDecryptPathAES = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\keys\\AESKEY";
-				String iDecryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\testCrypt.cpdf";
-				String oDecryptFile = "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\test.pdf";
+				String keyDecryptPathAES = "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\keys\\AESKEY";
+				String iDecryptFile = "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\testCrypt.cpdf";
+				String oDecryptFile = "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\test.pdf";
 
 				System.out.println("");
 				System.out.println("Veuillez indiquer le fichier à décrypter (AES): ");
@@ -86,8 +86,8 @@ public class Crypt {
 		KeyPair keyPair = RSA.generateKeyPair();
 		PublicKey pubKey = keyPair.getPublic();
 		PrivateKey privateKey = keyPair.getPrivate();
-		PublKey.sauvegardeClePublique(pubKey, "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\pubKey.txt");
-		PrivKey.sauvegardeClePrivee(privateKey, "D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\privateKey.txt");
+		PublKey.sauvegardeClePublique(pubKey, "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\pubKey.txt");
+		PrivKey.sauvegardeClePrivee(privateKey, "C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\privateKey.txt");
 
 		Thread.sleep(1 * 1000);
 
@@ -111,8 +111,8 @@ public class Crypt {
 				System.out.println("Veuillez indiquer le fichier à crypter (RSA): ");
 				System.out.println("");
 
-				File input = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
-				File output = new File("D:\\eclipse-workspace\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
+				File input = new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\inputCryptRSA.txt");
+				File output = new File("C:\\Users\\Megaport\\git\\CryptAndHash\\testsCrypt\\outputCryptRSA.txt");
 				FileInputStream fis = new FileInputStream(input);
 				FileOutputStream fos = new FileOutputStream(output);
 				
