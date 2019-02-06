@@ -39,13 +39,11 @@ public class AWSApplicationEC2 {
 //	
 //	@Override
 //	public String getAWSSecretKey() {
-//		// TODO Auto-generated method stub
 //		return null;
 //	}
 //	
 //	@Override
 //	public String getAWSAccessKeyId() {
-//		// TODO Auto-generated method stub
 //		return null;
 //	}
 //};
