@@ -1,4 +1,4 @@
-# CryptAndHash - Logiciel de Cryptage et Hashage
+# CryptAndHash
 
 ENCRYPTAGE/DECRYPTAGE DE FICHIER RSA EN COURS DE DEVELOPPEMENT => 90%
 
