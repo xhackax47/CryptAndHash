@@ -20,7 +20,7 @@ public class TestMenuAWSS3 {
 		
 		// Une fois vérifié que la variable est bien égale à 0 au départ on appelle la methode.
 		
-		Menus.afficheMenuAWSS3();
+		Menus.menuAWSS3();
 		
 		// Nous testons les différents affichages de menus en vérifiant que la variable est bien passé de 0 à 1.
 		

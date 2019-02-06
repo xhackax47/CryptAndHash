@@ -9,7 +9,7 @@ public class Menus {
 
 	static boolean menuG, menuAWS, menuAWSEC2, menuAWSS3, menuC, menuH, menuS, menuTS = false;
 
-	public static void afficheMenuGeneral() {
+	public static void menuGeneral() {
 		System.out.println("");
 		System.out.println("Menu Général");
 		System.out.println("");
@@ -24,7 +24,7 @@ public class Menus {
 		menuG = true;
 	}
 	
-	public static void afficheMenuAWS() {
+	public static void menuAWS() {
 		System.out.println("");
 		System.out.println("Amazon Web Services");
 		System.out.println("");
@@ -41,7 +41,7 @@ public class Menus {
 		menuAWS = true;
 	}
 	
-	public static void afficheMenuAWSEC2() {
+	public static void menuAWSEC2() {
 		System.out.println("");
 		System.out.println("Amazon Web Services - Elastic Compute Cloud");
 		System.out.println("");
@@ -56,7 +56,7 @@ public class Menus {
 		menuAWSEC2 = true;
 	}
 	
-	public static void afficheMenuAWSS3() {
+	public static void menuAWSS3() {
 		System.out.println("");
 		System.out.println("Amazon Web Services - Simple Storage Service");
 		System.out.println("");
@@ -77,7 +77,7 @@ public class Menus {
 		menuAWSS3 = true;
 	}
 
-	public static void afficheMenuCryptage() {
+	public static void menuCryptage() {
 		System.out.println("");
 		System.out.println("CRYPTAGE");
 		System.out.println("");
@@ -91,7 +91,7 @@ public class Menus {
 		menuC = true;
 	}
 
-	public static void afficheMenuHashage() {
+	public static void menuHashage() {
 		System.out.println("");
 		System.out.println("HASHAGE");
 		System.out.println("");
@@ -109,7 +109,7 @@ public class Menus {
 		menuH = true;
 	}
 
-	public static void afficheMenuSecret() {
+	public static void menuAES() {
 		System.out.println("");
 		System.out.println("CRYPTAGE SECRET (AES)");
 		System.out.println("");
@@ -123,7 +123,7 @@ public class Menus {
 		menuS = true;
 	}
 
-	public static void afficheMenuTopSecret() {
+	public static void menuRSA() {
 		System.out.println("");
 		System.out.println("CRYPTAGE TOP SECRET (RSA)");
 		System.out.println("");

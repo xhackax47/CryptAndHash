@@ -13,7 +13,7 @@ public class MenusAWS {
 
 	public static void menuAWSEC2() {
 		do {
-			Menus.afficheMenuAWSEC2();
+			Menus.menuAWSEC2();
 			String sEC2 = sc.nextLine();
 
 			// Gestion NumberFormatException
@@ -50,7 +50,7 @@ public class MenusAWS {
 
 	public static void menuAWSS3() throws InterruptedException {
 		do {
-			Menus.afficheMenuAWSS3();
+			Menus.menuAWSS3();
 			String sS3 = sc.nextLine();
 
 			// Gestion NumberFormatException
@@ -63,25 +63,30 @@ public class MenusAWS {
 			switch (choixS3) {
 			
 			case 0:
+				System.out.println("");
 				System.out.println("Merci d'avoir utilisé les fonctionnalités AWS de ce programme.");
+				System.out.println("");
 				Thread.sleep(2*1000);
+				break;
 
 			case 1:
 				System.out.println("");
 				System.out.println("CREATION CONTENEUR S3");
+				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
 				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur à créer :");
 				System.out.println("");
 				String bucketName = sc.nextLine();
 				AWSApplicationS3.createBucket(bucketName);
 				Thread.sleep(1*1000);
-				System.out.println("Le conteneur " + bucketName + " a été crée avec succès.");
-				Thread.sleep(1*1000);
 				break;
 
 			case 2:
 				System.out.println("");
 				System.out.println("LISTE DES CONTENEURS S3");
+				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
 				System.out.println("");
 				AWSApplicationS3.listAllBuckets();
 				Thread.sleep(3*1000);
@@ -91,13 +96,13 @@ public class MenusAWS {
 				System.out.println("");
 				System.out.println("SUPPRESSION CONTENEUR S3");
 				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
+				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur à supprimer :");
 				System.out.println("");
 				String bucketNameDel = sc.nextLine();
 				System.out.println("");
 				AWSApplicationS3.deleteBucket(bucketNameDel);
-				Thread.sleep(1*1000);
-				System.out.println("Suppression de " + bucketNameDel + " effectuée avec succès");
 				Thread.sleep(1*1000);
 				break;
 
@@ -105,13 +110,13 @@ public class MenusAWS {
 				System.out.println("");
 				System.out.println("ENVOYER UN OBJET SUR UN CONTENEUR S3");
 				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
+				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur :");
 				System.out.println("");
 				String bucketNameUpObj = sc.nextLine();
 				System.out.println("");
 				AWSApplicationS3.uploadBucket(bucketNameUpObj);
-				Thread.sleep(1*1000);
-				System.out.println("Envoi effectué avec succès vers " + bucketNameUpObj);
 				Thread.sleep(1*1000);
 				break;
 				
@@ -119,12 +124,15 @@ public class MenusAWS {
 				System.out.println("");
 				System.out.println("LISTER LES OBJETS D'UN CONTENEUR S3");
 				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
+				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur :");
 				System.out.println("");
 				String bucketNameListObj = sc.nextLine();
 				System.out.println("");
+				System.out.println("-----------------------------------------------Liste des objets contenus dans"  + bucketNameListObj +"-------------------------------------------");
 				System.out.println("");
-				System.out.println("Liste des objets contenus dans " + bucketNameListObj + ":");
+				System.out.println();
 				System.out.println("");
 				Thread.sleep(1*1000);
 				AWSApplicationS3.listAllObjectsFromBucket(bucketNameListObj);
@@ -134,6 +142,8 @@ public class MenusAWS {
 			case 6:
 				System.out.println("");
 				System.out.println("TELECHARGER UN OBJET SUR UN CONTENEUR S3");
+				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
 				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur :");
 				System.out.println("");
@@ -145,13 +155,13 @@ public class MenusAWS {
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				System.out.println("Téléchargement effectué avec succès");
-				Thread.sleep(1*1000);
 				break;
 				
 			case 7:
 				System.out.println("");
 				System.out.println("COPIER UN OBJET D'UN CONTENEUR S3");
+				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
 				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur ou se trouve l'objet à copier :");
 				System.out.println("");
@@ -163,13 +173,13 @@ public class MenusAWS {
 				System.out.println("");
 				Thread.sleep(1*1000);
 				AWSApplicationS3.copyObjectFromBucket(bucketNameCpObj, destinationBucketNameCpObj);
-				System.out.println("Copie effectuée avec succès de " + bucketNameCpObj + " vers " + destinationBucketNameCpObj);
-				Thread.sleep(1*1000);
 				break;
 				
 			case 8:
 				System.out.println("");
 				System.out.println("SUPPRIMER UN OBJET D'UN CONTENEUR S3");
+				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
 				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur :");
 				System.out.println("");
@@ -177,13 +187,13 @@ public class MenusAWS {
 				System.out.println("");
 				Thread.sleep(1*1000);
 				AWSApplicationS3.deleteObjectFromBucket(bucketNameDelObj);
-				System.out.println("L'objet a bien été supprimé avec succès du conteneur " + bucketNameDelObj);
-				Thread.sleep(1*1000);
 				break;
 				
 			case 9:
 				System.out.println("");
 				System.out.println("SUPPRIMER PLUSIEURS OBJETS D'UN CONTENEUR S3");
+				System.out.println("");
+				System.out.println("------------------------------------------------------------------------------------------");
 				System.out.println("");
 				System.out.println("Veuillez indiquer le nom du conteneur :");
 				System.out.println("");
@@ -191,8 +201,6 @@ public class MenusAWS {
 				System.out.println("");
 				Thread.sleep(1*1000);
 				AWSApplicationS3.deleteObjectsFromBucket(bucketNameDelObjs);
-				System.out.println("Les objets ont bien été supprimés avec succès du conteneur " + bucketNameDelObjs);
-				Thread.sleep(1*1000);
 				break;
 				
 			default:

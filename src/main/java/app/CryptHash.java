@@ -28,7 +28,7 @@ public class CryptHash {
 
 		// Boucle Choix Programme
 		do {
-			Menus.afficheMenuGeneral();
+			Menus.menuGeneral();
 			String sG = sc.nextLine();
 
 			// Gestion NumberFormatException
@@ -44,7 +44,7 @@ public class CryptHash {
 			// MENU AWS
 			case 0:
 				do {
-					Menus.afficheMenuAWS();
+					Menus.menuAWS();
 					String sA = sc.nextLine();
 
 					// Gestion NumberFormatException
@@ -79,7 +79,7 @@ public class CryptHash {
 			// MENU CRYPTAGE
 			case 1:
 				do {
-					Menus.afficheMenuCryptage();
+					Menus.menuCryptage();
 					String sC = sc.nextLine();
 
 					// Gestion NumberFormatException
@@ -92,12 +92,12 @@ public class CryptHash {
 					switch (choixCrypt) {
 
 					case 1:
-						Crypt.secretCrypt();
+						Crypt.cryptAES();
 						break;
 
 					case 2:
 						try {
-							Crypt.topSecretCrypt();
+							Crypt.cryptRSA();
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
@@ -118,7 +118,7 @@ public class CryptHash {
 			// MENU HASHAGE
 			case 2:
 				do {
-					Menus.afficheMenuHashage();
+					Menus.menuHashage();
 					String sH = sc.nextLine();
 
 					// Gestion NumberFormatException
