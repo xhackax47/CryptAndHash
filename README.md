@@ -1,14 +1,17 @@
 # CryptAndHash - Logiciel de Cryptage et Hashage
 
-ENCRYPTAGE/DECRYPTAGE DE FICHIER RSA EN COURS DE DEVELOPPEMENT => 85%
+ENCRYPTAGE/DECRYPTAGE DE FICHIER RSA EN COURS DE DEVELOPPEMENT => 90%
 
-FONCTIONNALITES AWS EN COURS DE DEVELOPPEMENT => 60%
+FONCTIONNALITES AWS EN COURS DE DEVELOPPEMENT => 80%
 
 GUI EN COURS DE DEVELOPPEMENT => 5%
 
 ## Description
 
-Ce logiciel sert à transformer des chaînes de caractères en chaine de hashage que vous pourrez utiliser comme mot de passe voir pour certains plutôt comme phrase de passe sans avoir à la retenir mais juste à retenir la clé de départ.
+Ce logiciel s'appelle CryptAndHash et possède plusieurs fonctionnalités telles que :
+* Amazon Web Services Elastic Compute Cloud (EC2) et Simple Storage Service (S3)
+* Cryptage de fichier AES ou RSA
+* Hashage de chaînes de caractères.
 
 ```
 EXEMPLE : Le mot "Test" dans tous les types de hashage proposé donne :
@@ -27,7 +30,7 @@ SHA512 : c6ee9e33cf5c6715a1d148fd73f7318884b41adcb916021e2bc0e800a5c5dd97f514217
 
 ```
 
-Parfait pour générer des mots de passe très difficile à casser avec un simple mot ou suite que vous avez déjà en mémoire.
+Parfait pour crypter ses fichiers et les envoyer sur des machines virtuelles dans le cloud ou pour générer des mots de passe très difficile à casser avec un simple mot ou suite que vous avez déjà en mémoire.
 
 ## Pré-requis
 
