@@ -48,6 +48,7 @@ public class AWSApplicationEC2 {
 //	}
 //};
 
+	// Connection au client AWS EC2
 	public static AmazonEC2 connectEC2() {
 		AmazonEC2 ec2Client = AmazonEC2ClientBuilder.standard()
 				.withCredentials(new AWSStaticCredentialsProvider(credentials)).withRegion(Regions.EU_WEST_3).build();
@@ -55,7 +56,7 @@ public class AWSApplicationEC2 {
 	}
 
 
-	// Créer un groupe de sécurité
+	// Création un groupe de sécurité
 	public static void createSecurityGroup() {
 
 		CreateSecurityGroupRequest createSecurityGroupRequest = new CreateSecurityGroupRequest()
@@ -78,6 +79,7 @@ public class AWSApplicationEC2 {
 
 	}
 
+	// Création paire de clés
 	public static void createKeyPair() {
 		CreateKeyPairRequest createKeyPairRequest = new CreateKeyPairRequest().withKeyName("cryptandhash-key-pair");
 		CreateKeyPairResult createKeyPairResult = connectEC2().createKeyPair(createKeyPairRequest);
@@ -85,7 +87,7 @@ public class AWSApplicationEC2 {
 																				// key, Amazon doesn't store the private
 																				// key
 	}
-
+	// Obtention paire de clés
 	public static void getKeyPairs() {
 		DescribeKeyPairsRequest describeKeyPairsRequest = new DescribeKeyPairsRequest();
 		DescribeKeyPairsResult describeKeyPairsResult = connectEC2().describeKeyPairs(describeKeyPairsRequest);
