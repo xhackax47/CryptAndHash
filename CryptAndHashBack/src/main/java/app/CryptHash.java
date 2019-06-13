@@ -24,7 +24,7 @@ public class CryptHash {
 		cryptHashON = 1;
 		final Scanner sc = new Scanner(System.in);
 
-		System.out.println("Bienvenue dans le programme CryptAndHash");
+		System.out.println("LOADING CryptAndHash");
 
 		// Boucle Choix Programme
 		do {
