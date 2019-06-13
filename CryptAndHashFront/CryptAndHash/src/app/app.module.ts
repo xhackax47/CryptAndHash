@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { AccueilComponent } from './accueil/accueil.component';
 import { CryptageComponent } from './cryptage/cryptage.component';
 import { HashageComponent } from './hashage/hashage.component';
 import { AWSComponent } from './aws/aws.component';
@@ -15,7 +14,6 @@ import { SearchResultComponent } from './search-result/search-result.component';
   declarations: [
     AppComponent,
     MenuComponent,
-    AccueilComponent,
     CryptageComponent,
     HashageComponent,
     AWSComponent,
