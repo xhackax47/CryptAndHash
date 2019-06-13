@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.4.RELEASE</version>
+		<version>2.1.5.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -27,7 +27,7 @@
 			<organization>NONE</organization>
 			<organizationUrl />
 			<roles>
-				<role>Architect</role>
+				<role>AdminSys</role>
 				<role>Java /J2EE Developer</role>
 			</roles>
 			<timezone>France/Montpellier</timezone>
