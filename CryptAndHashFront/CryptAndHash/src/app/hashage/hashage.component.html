@@ -4,51 +4,94 @@
     <div class="card-deck">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">MD2</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                    content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">MD2 (non recommandé)</h5>
+                <p class="card-text">MD2, pour Message Digest 2, est une fonction de hachage conçue par le professeur
+                    Ronald Rivest du Massachusetts Institute of Technology en 1989. C'est un algorithme de signature.
+                    Plutôt destiné aux processeurs de type 8 bits, le MD2 n'est plus tellement employé. Il a été
+                    largement supplanté par le MD4 et le MD5.
+                </p>
+                <p class="card-footer">Le MD2 n'est plus considéré comme sûr suite à une attaque de 2004 même si cette
+                    attaque est tout de même très gourmande et impraticable à l'heure actuelle</p>
+                <div>
+                    <label for="md2Hash">Chaîne de caractères à hacher : </label>
+                    <input type="text" id="md2Hash" name="md2Hash">
+                </div>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">MD5</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <p class="card-text">MD5 (Message Digest 5) est une fonction de hachage cryptographique qui calcule, à
+                    partir d'un fichier numérique, son empreinte numérique (en l'occurrence une séquence de 128 bits ou
+                    32 caractères en notation hexadécimale) avec une probabilité très forte que deux fichiers différents
+                    donnent deux empreintes différentes.</p>
+                <p class="card-footer">En 2004, une équipe chinoise découvre des collisions complètes. MD5 n'est donc
+                    plus considéré comme sûr au sens cryptographique.</p>
+                <div>
+                    <label for="md5Hash">Chaîne de caractères à hacher : </label>
+                    <input type="text" id="md5Hash" name="md5Hash">
+                </div>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">SHA128</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Secure Hash Algorithm 128</h5>
+                <p class="card-text">Le SHA-1 prend un message d'un maximum de 128 bits en entrée. Son fonctionnement
+                    est similaire à celui du MD4 ou MD5 de Ronald Rivest. Quatre fonctions booléennes sont définies,
+                    elles prennent 3 mots de 32 bits en entrée et calculent un mot de 32 bits. Une fonction spécifique
+                    de rotation est également disponible, elle permet de déplacer les bits vers la gauche (le mouvement
+                    est circulaire et les bits reviennent à droite).</p>
+                <p class="card-footer">En 2005, des cryptanalystes ont découvert des attaques sur SHA-1, suggérant que
+                    l'algorithme pourrait ne plus être suffisamment sûr pour continuer à l'utiliser dans le futur.</p>
+                <div>
+                    <label for="sha1Hash">Chaîne de caractères à hacher : </label>
+                    <input type="text" id="sha1Hash" name="sha1Hash">
+                </div>
             </div>
         </div>
     </div>
     <div class="card-deck">
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">SHA256</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Secure Hash Algorithm 256</h5>
+                <p class="card-text">La fonction SHA-256 devient en 2002 un standard fédéral de traitement de
+                    l'information (FIPS du NIST). Elle produit un haché de 256 bits.</p>
+                <p class="card-footer">Bien que l'algorithme de SHA-2 partage des
+                    similarités avec celui de SHA-1, les attaques envers le SHA-1 n'ont actuellement pas pu être
+                    étendues à SHA-2.</p>
+                <div>
+                    <label for="sha2Hash">Chaîne de caractères à hacher : </label>
+                    <input type="text" id="sha2Hash" name="sha2Hash">
+                </div>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">SHA384</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Secure Hash Algorithm 384</h5>
+                <p class="card-text">La fonction SHA-384 est apparue en compagnie de SHA-256 et SHA-512. Elle produit un
+                    haché de 384 bits.</p>
+                <p class="card-footer">SHA-3 est issu de la NIST hash function competition qui a élu l'algorithme
+                    Keccak2 le 2 octobre 2012. Elle n’est pas destinée à remplacer SHA-2, qui n’a à l'heure actuelle pas
+                    été compromise par une attaque significative.</p>
+                <div>
+                    <label for="sha3Hash">Chaîne de caractères à hacher : </label>
+                    <input type="text" id="sha3Hash" name="sha3Hash">
+                </div>
             </div>
         </div>
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">SHA512</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                    content. This card has even longer content than the first to show that equal height action.</p>
-                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                <h5 class="card-title">Secure Hash Algorithm 512</h5>
+                <p class="card-text">La fonction SHA-512 est apparue en même temps que SHA-256 et devient comme celle-ci
+                    en 2002 un standard fédéral de traitement de l'information (FIPS du NIST). Elle produit un haché de
+                    512 bits.</p>
+                <p class="card-footer">Etant donné que le SHA-2 moins puissant que le SHA-512 n'a à l'heure actuelle
+                    toujours pas été
+                    cassé, le SHA-512 reste très sûr.</p>
+                <div>
+                    <label for="sha5Hash">Chaîne de caractères à hacher : </label>
+                    <input type="text" id="sha5Hash" name="sha5Hash">
+                </div>
             </div>
         </div>
     </div>
